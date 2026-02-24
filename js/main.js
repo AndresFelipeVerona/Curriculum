@@ -85,10 +85,11 @@ gsap.to('.hero-bg-text', {
 // ========================
 // SKILL BLOCKS
 // ========================
-gsap.from('.skill-block', {
-  scrollTrigger: { trigger: '.skills-grid', start: 'top 80%' },
-  y: 60,
-  opacity: 0,
+gsap.set('.skill-block', { y: 50, opacity: 0 });
+gsap.to('.skill-block', {
+  scrollTrigger: { trigger: '.skills-grid', start: 'top 85%', once: true },
+  y: 0,
+  opacity: 1,
   stagger: 0.1,
   duration: 0.8,
   ease: 'power3.out'
@@ -97,10 +98,11 @@ gsap.from('.skill-block', {
 // ========================
 // EDUCATION ITEMS
 // ========================
-gsap.from('.edu-item', {
-  scrollTrigger: { trigger: '.edu-list', start: 'top 75%' },
-  y: 40,
-  opacity: 0,
+gsap.set('.edu-item', { y: 40, opacity: 0 });
+gsap.to('.edu-item', {
+  scrollTrigger: { trigger: '.edu-list', start: 'top 85%', once: true },
+  y: 0,
+  opacity: 1,
   stagger: 0.2,
   duration: 0.8,
   ease: 'power3.out'
@@ -109,11 +111,11 @@ gsap.from('.edu-item', {
 // ========================
 // PROJECT CARDS
 // ========================
-gsap.set('.project-card', { opacity: 1 });
-gsap.from('.project-card', {
-  scrollTrigger: { trigger: '.projects-grid', start: 'top bottom', once: true },
-  y: 60,
-  opacity: 0,
+gsap.set('.project-card', { y: 50, opacity: 0 });
+gsap.to('.project-card', {
+  scrollTrigger: { trigger: '.projects-grid', start: 'top 85%', once: true },
+  y: 0,
+  opacity: 1,
   stagger: 0.15,
   duration: 0.8,
   ease: 'power3.out'
@@ -122,24 +124,24 @@ gsap.from('.project-card', {
 // ========================
 // CONTACT SECTION
 // ========================
-gsap.set('.big-title', { opacity: 1 });
-gsap.from('.big-title', {
-  scrollTrigger: { trigger: '.contact-strip', start: 'top bottom', once: true },
-  y: 80,
-  opacity: 0,
+gsap.to('.big-title', {
+  scrollTrigger: { trigger: '.contact-strip', start: 'top 85%', once: true },
+  y: 0,
+  opacity: 1,
   duration: 1.2,
   ease: 'power4.out'
 });
+gsap.set('.big-title', { y: 60, opacity: 0 });
 
-gsap.set('.contact-link', { opacity: 1 });
-gsap.from('.contact-link', {
-  scrollTrigger: { trigger: '.contact-links', start: 'top bottom', once: true },
-  x: -30,
-  opacity: 0,
+gsap.to('.contact-link', {
+  scrollTrigger: { trigger: '.contact-links', start: 'top 85%', once: true },
+  x: 0,
+  opacity: 1,
   stagger: 0.1,
   duration: 0.7,
   ease: 'power3.out'
 });
+gsap.set('.contact-link', { x: -20, opacity: 0 });
 
 // ========================
 // SMOOTH ANCHOR SCROLL
