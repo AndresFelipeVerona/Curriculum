@@ -1,6 +1,37 @@
 gsap.registerPlugin(ScrollTrigger);
 
 // ========================
+// HAMBURGER MENU
+// ========================
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+const nav = document.querySelector('nav');
+
+if (hamburger && navLinks) {
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target)) {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    }
+  });
+}
+
+// ========================
 // CUSTOM CURSOR
 // ========================
 const cursor = document.getElementById('cursor');
