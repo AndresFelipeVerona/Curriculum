@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andres Verona — Desarrollador</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@400;500;600;700;800&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="follower"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">AndresVerona — Portfolio</div>
+    <ul class="nav-links">
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#educacion">Educación</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="weather-widget">
+      <span class="weather-icon" id="weatherIcon">🌤️</span>
+      <div class="weather-info">
+        <span class="weather-temp" id="weatherTemp">--°C</span>
+        <span class="weather-location" id="weatherLocation">Barranquilla</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg-text">ANDRES</div>
+    <div class="hero-eyebrow">Disponible para trabajar</div>
+    <div class="hero-name-profile">
+      <h1 class="hero-name">
+        <span class="line-1">Andres</span>
+        <span class="line-2">Verona</span>
+      </h1>
+      <div class="hero-profile">
+        <img src="img/perfil.jpeg" alt="Foto de perfil de Andres Verona" class="profile-image">
+      </div>
+    </div>
+    <div class="hero-bottom">
+      <p class="hero-role">Desarrollador Junior & Estudiante de<br>Ingeniería de Sistemas en Barranquilla, Colombia.</p>
+      <div class="hero-contacts">
+        <a href="mailto:averonac@gmail.com">andresverona98@gmail.com</a>
+        <span>+57 300 664 8305</span>
+        <a href="https://github.com/AndresFelipeVerona" target="_blank">github.com/AndresFelipeVerona</a>
+        <a href="https://www.linkedin.com/in/andres-felipe-verona-cera-6a60a524b" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span class="scroll-text">Scroll</span>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-header">
+      <div>
+        <div class="section-num">01 / 04</div>
+        <h2 class="section-title">Habilidades<br>Técnicas</h2>
+      </div>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-block">
+        <span class="skill-block-num">01 — Frontend</span>
+        <h3>Desarrollo Web</h3>
+        <div class="tags">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Responsive Design</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <span class="skill-block-num">02 — Backend</span>
+        <h3>Lenguajes &amp; POO</h3>
+        <div class="tags">
+          <span class="tag">Java</span>
+          <span class="tag">OOP</span>
+          <span class="tag">Estructuras de Datos</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <span class="skill-block-num">03 — Mobile</span>
+        <h3>Aplicaciones Móviles</h3>
+        <div class="tags">
+          <span class="tag">Flutter</span>
+          <span class="tag">Dart</span>
+          <span class="tag">Cross-platform</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <span class="skill-block-num">04 — BaaS</span>
+        <h3>Base de Datos</h3>
+        <div class="tags">
+          <span class="tag">Supabase</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">SQL</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCACIÓN -->
+  <section id="educacion">
+    <div class="section-header">
+      <div>
+        <div class="section-num">02 / 04</div>
+        <h2 class="section-title">Educación</h2>
+      </div>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="edu-list">
+      <div class="edu-item">
+        <div class="edu-year">2023 — Actualidad</div>
+        <div class="edu-body">
+          <img src="img/certificado2.PNG" alt="Certificado Ingeniería de Sistemas" class="edu-certificate"
+            style="cursor: pointer;">
+          <div class="edu-content">
+            <h3 class="edu-degree">Ingeniería de Sistemas</h3>
+            <div class="edu-institution">Universidad Simón Bolívar — Barranquilla</div>
+            <p class="edu-desc">
+              Cursando 6to semestre con enfoque en desarrollo de software, programación orientada a objetos, estructuras
+              de datos y aplicaciones modernas. Formación continua en mejores prácticas de desarrollo e ingeniería del
+              software.
+            </p>
+          </div>
+        </div>
+        <div class="edu-badge">
+          <span class="badge-pill">En curso</span>
+        </div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-year">Completado</div>
+        <div class="edu-body">
+          <img src="img/certificado1.jpeg" alt="Certificado Técnico en Programación Web" class="edu-certificate"
+            style="cursor: pointer;">
+          <div class="edu-content">
+            <h3 class="edu-degree">Técnico en Programación Web</h3>
+            <div class="edu-institution">Instituto Litoral — Barranquilla</div>
+            <p class="edu-desc">
+              Formación técnica especializada en desarrollo web. Fundamentos sólidos en HTML y CSS. Desarrollo de
+              proyectos prácticos enfocados en la creación de sitios web responsivos, funcionales y bien estructurados.
+            </p>
+          </div>
+        </div>
+        <div class="edu-badge">
+          <span class="badge-pill">Graduado</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos">
+    <div class="section-header">
+      <div>
+        <div class="section-num">03 / 04</div>
+        <h2 class="section-title">Proyectos<br>Destacados</h2>
+      </div>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card" data-project="proyecto1" style="cursor: pointer;">
+        <div class="project-tag">Mobile</div>
+        <h3 class="project-name">Aplicación de contabilidad</h3>
+        <p class="project-desc">
+          App movil con sistema de inventarios, registro de productos, calculo de ganancias.
+        </p>
+        <div class="project-stack">
+          <span class="stack-item">Flutter</span>
+          <span class="stack-item">Dart</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-project="proyecto2" style="cursor: pointer;">
+        <div class="project-tag">Mobile</div>
+        <h3 class="project-name">App para llevar control</h3>
+        <p class="project-desc">
+          Aplicación móvil para llevar el control en la universidad, con autenticación usando Supabase
+        </p>
+        <div class="project-stack">
+          <span class="stack-item">Flutter</span>
+          <span class="stack-item">Dart</span>
+          <span class="stack-item">Supabase</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-project="proyecto3" style="cursor: pointer;">
+        <div class="project-tag">Web</div>
+        <h3 class="project-name">Creador de torneos</h3>
+        <p class="project-desc">
+          Sistema orientado a crear torneos de futbol, registrar partidos, calcula automaticamente los puntos y genera
+          tablas de posiciones, los datos se almacenan en una base de datos de Supabase.
+        </p>
+        <div class="project-stack">
+          <span class="stack-item">HTML</span>
+          <span class="stack-item">CSS</span>
+          <span class="stack-item">JavaScript</span>
+          <span class="stack-item">Supabase</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" style="border: none; padding: 0;">
+    <div class="contact-strip">
+      <div class="section-num">04 / 04</div>
+      <h2 class="big-title">Hablemos<br><span>juntos</span></h2>
+      <div class="contact-links">
+        <a href="mailto:andresverona98@gmail.com" class="contact-link">
+          andresverona98@gmail.com
+          <span class="contact-link-arrow">→</span>
+        </a>
+        <a href="https://github.com/AndresFelipeVerona" target="_blank" class="contact-link">
+          GitHub
+          <span class="contact-link-arrow">→</span>
+        </a>
+        <a href="https://www.linkedin.com/in/andres-felipe-verona-cera-6a60a524b" target="_blank" class="contact-link">
+          LinkedIn
+          <span class="contact-link-arrow">→</span>
+        </a>
+        <a href="tel:+573006648305" class="contact-link">
+          +57 300 664 8305
+          <span class="contact-link-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Andres Felipe Verona Cera</span>
+    <div class="footer-accent"></div>
+    <span>Barranquilla, Colombia</span>
+  </footer>
+
+  <!-- Modal para certificados -->
+  <div id="certificateModal" class="certificate-modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <img id="modalImage" src="" alt="Certificado" class="modal-image">
+    </div>
+  </div>
+
+  <!-- Modal para proyectos -->
+  <div id="projectModal" class="project-modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="project-modal-container">
+        <div class="project-modal-images">
+          <img id="projectImage" src="" alt="Imagen del proyecto" class="project-modal-image">
+        </div>
+        <div class="project-modal-controls">
+          <button class="nav-button prev-btn" id="prevBtn">❮</button>
+          <div class="image-counter">
+            <span id="currentImage">1</span> / <span id="totalImages">1</span>
+          </div>
+          <button class="nav-button next-btn" id="nextBtn">❯</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/services/weatherService.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
