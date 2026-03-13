@@ -238,6 +238,13 @@ const projectImages = {
     'img/proyecto3/1.PNG',
     'img/proyecto3/2.PNG',
     'img/proyecto3/3.PNG'
+  ],
+  proyecto4: [
+    'img/proyecto4/1.PNG',
+    'img/proyecto4/2.PNG',
+    'img/proyecto4/3.PNG',
+    'img/proyecto4/4.PNG',
+    'img/proyecto4/5.PNG'
   ]
 };
 
