@@ -245,8 +245,42 @@ const projectImages = {
     'img/proyecto4/3.PNG',
     'img/proyecto4/4.PNG',
     'img/proyecto4/5.PNG'
+  ],
+  proyecto5: [
+    'img/proyecto5/1.PNG',
+    'img/proyecto5/2.PNG',
+    'img/proyecto5/3.PNG',
+    'img/proyecto5/4.PNG',
+    'img/proyecto5/5.PNG'
+  ],
+  proyecto6: [
+    'img/proyecto6/1.PNG',
+    'img/proyecto6/2.PNG',
+    'img/proyecto6/3.PNG',
+    'img/proyecto6/4.PNG'
+  ],
+  proyecto7: [
+    'img/proyecto7/1.PNG',
+    'img/proyecto7/2.PNG',
+    'img/proyecto7/3.PNG',
+    'img/proyecto7/4.PNG',
+    'img/proyecto7/5.PNG'
   ]
 };
+
+// Miniatura con la primera imagen de cada proyecto
+projectCards.forEach(card => {
+  const images = projectImages[card.getAttribute('data-project')] || [];
+  if (images.length === 0) return;
+
+  const thumb = document.createElement('div');
+  thumb.className = 'project-thumb';
+  thumb.innerHTML = `
+    <img src="${images[0]}" alt="Vista previa de ${card.querySelector('.project-name').textContent}" loading="lazy">
+    <span class="project-thumb-label">Ver ${images.length} fotos</span>
+  `;
+  card.prepend(thumb);
+});
 
 projectCards.forEach(card => {
   card.addEventListener('click', () => {
