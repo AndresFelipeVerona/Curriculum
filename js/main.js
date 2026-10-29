@@ -32,32 +32,6 @@ if (hamburger && navLinks) {
 }
 
 // ========================
-// CUSTOM CURSOR
-// ========================
-const cursor = document.getElementById('cursor');
-const follower = document.getElementById('follower');
-let mouseX = 0, mouseY = 0, followerX = 0, followerY = 0;
-
-document.addEventListener('mousemove', e => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-  gsap.to(cursor, { x: mouseX - 6, y: mouseY - 6, duration: 0.1 });
-});
-
-function animateFollower() {
-  followerX += (mouseX - followerX - 18) * 0.1;
-  followerY += (mouseY - followerY - 18) * 0.1;
-  follower.style.transform = `translate(${followerX}px, ${followerY}px)`;
-  requestAnimationFrame(animateFollower);
-}
-animateFollower();
-
-document.querySelectorAll('a, button').forEach(el => {
-  el.addEventListener('mouseenter', () => gsap.to(cursor, { scale: 3, duration: 0.3 }));
-  el.addEventListener('mouseleave', () => gsap.to(cursor, { scale: 1, duration: 0.3 }));
-});
-
-// ========================
 // HERO ANIMATIONS
 // ========================
 const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
@@ -251,7 +225,8 @@ const projectImages = {
     'img/proyecto5/2.PNG',
     'img/proyecto5/3.PNG',
     'img/proyecto5/4.PNG',
-    'img/proyecto5/5.PNG'
+    'img/proyecto5/5.PNG',
+    'img/proyecto5/6.PNG'
   ],
   proyecto6: [
     'img/proyecto6/1.PNG',
@@ -265,8 +240,34 @@ const projectImages = {
     'img/proyecto7/3.PNG',
     'img/proyecto7/4.PNG',
     'img/proyecto7/5.PNG'
+  ],
+  proyecto8: [
+    'img/proyecto8/1.PNG',
+    'img/proyecto8/2.PNG',
+    'img/proyecto8/3.PNG',
+    'img/proyecto8/4.PNG',
+    'img/proyecto8/5.PNG'
+  ],
+  proyecto9: [
+    'img/proyecto9/1.PNG',
+    'img/proyecto9/2.PNG',
+    'img/proyecto9/3.PNG',
+    'img/proyecto9/4.PNG',
+    'img/proyecto9/5.PNG'
+  ],
+  proyecto10: [
+    'img/proyecto10/1.PNG',
+    'img/proyecto10/2.PNG',
+    'img/proyecto10/3.PNG',
+    'img/proyecto10/4.PNG',
+    'img/proyecto10/5.PNG'
   ]
 };
+
+// El enlace "Visitar sitio" abre la web real sin disparar la galería de la tarjeta
+document.querySelectorAll('.project-link').forEach(link => {
+  link.addEventListener('click', e => e.stopPropagation());
+});
 
 // Miniatura con la primera imagen de cada proyecto
 projectCards.forEach(card => {

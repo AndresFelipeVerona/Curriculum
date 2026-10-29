@@ -27,40 +27,8 @@ body {
   background: var(--black);
   color: var(--white);
   overflow-x: hidden;
-  cursor: none;
   font-weight: 400;
   letter-spacing: -0.3px;
-}
-
-/* ========================
-   CURSOR
-======================== */
-.cursor {
-  width: 12px;
-  height: 12px;
-  background: var(--accent);
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 10001;
-  mix-blend-mode: difference;
-  transition: transform 0.15s ease, width 0.3s ease, height 0.3s ease;
-}
-
-.cursor-follower {
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid var(--accent);
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 10000;
-  opacity: 0.5;
-  transition: transform 0.4s ease;
 }
 
 /* ========================
@@ -742,6 +710,43 @@ section {
   transform: translateX(4px);
 }
 
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.project-link {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--white);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(245, 242, 237, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.project-link::after {
+  content: '↗';
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.project-link:hover::after {
+  transform: translate(2px, -2px);
+}
+
 /* ========================
    CONTACT STRIP
 ======================== */
@@ -1035,10 +1040,6 @@ footer span {
 
 /* ── SMALL TABLET (max 768px) ── */
 @media (max-width: 768px) {
-  /* — CURSOR: desactivar en touch — */
-  body { cursor: auto; }
-  .cursor, .cursor-follower { display: none !important; }
-
   /* — NAV — */
   nav {
     padding: 1rem 1.5rem;
@@ -1145,6 +1146,7 @@ footer span {
   .project-desc { font-size: 0.85rem; margin-bottom: 1.5rem; }
   .project-stack { justify-content: center; }
   .project-view { justify-content: center; }
+  .project-actions { justify-content: center; }
 
   /* — CONTACT — */
   .contact-strip { padding: 3rem 1.5rem; gap: 2rem; }
